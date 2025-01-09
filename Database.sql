@@ -1,0 +1,18 @@
+CREATE DATABASE accounts;
+
+USE accounts;
+
+CREATE TABLE accounts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    company_name VARCHAR(255),
+    position VARCHAR(255),
+    phone1 VARCHAR(20),
+    phone2 VARCHAR(20),
+    phone3 VARCHAR(20),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
